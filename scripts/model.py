@@ -7,7 +7,7 @@ from keras.layers import LSTM
 from keras.utils import np_utils
 from keras.callbacks import ModelCheckpoint
 
-textfile = "/Users/jamesledoux/Desktop/cervantes"
+textfile = "author_files/cervantes"
 textfile = open(textfile).read().lower()
 badtext = '/:;][{}-=+)(*&^%$#@!~1234567890'
 textfile = textfile.translate(None, badtext)
