@@ -1,0 +1,46 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="LSTM Neural Network Text Generation.">
+    <meta name="author" content="Evan Otero & James LeDoux">
+    <title>Edgar Alan Turing</title>
+    <link href="css/style.css" rel="stylesheet" type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        function submit(){
+        $.post( "?", { test_text : $("#test_text").val() },
+            function( data ) {
+            $('#test_result').html(data);});
+        };
+    </script>
+    <h1><span class="poe">Edgar Al</span></span><span class="turing">an Turing</span></h1>
+    <div class='loader loader--snake'></div>
+    <h3>Test the literary ability of Edgar in being able to write in numerous styles on any subject of text.</h3>
+    <h3>Choose an author style and enter the your text of choice below.</h3>
+    <br>
+    <div id="form">
+        <span>Author Style:</span>
+        <br>
+        <select name="author">
+          <option value="Aristotle">Aristotle</option>
+          <option value="Tolkien">Tolkien</option>
+          <option value="Freud">Freud</option>
+          <option value="Joyce">Joyce</option>
+            <option value="Marx">Marx</option>
+        </select>
+        <br><br>
+        <span>Text:</span>
+        <br>
+        <textarea rows="20" cols="50"></textarea>
+        <br><br>
+        <input type="button" value="compute" title="compute" onclick="submit();"/>
+    </div>
+</body>
+</html>

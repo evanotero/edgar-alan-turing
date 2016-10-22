@@ -1,0 +1,95 @@
+body
+{
+    background: #fff url("../img/background.jpg") no-repeat center fixed;
+    font-family: 'Arvo', serif;
+    color: #fff;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    font-size:14px;
+    -moz-transition-property: text-shadow;
+    -moz-transition-duration: 4s;
+    -webkit-transition-property: text-shadow;
+    -webkit-transition-duration: 4s;
+    text-shadow: none;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 5em;
+    margin-bottom: 0;
+}
+
+h1, h3 {
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .8);
+}
+
+span.poe {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+span.turing {
+    font-family: 'Source Code Pro', monospace;
+}
+
+span {
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .95);
+    font-size: 1.2em;
+}
+
+div > select,
+div > textarea,
+div > input
+{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+textarea, select
+{
+    background-color: rgba(255, 255, 255, .9)
+}
+
+textarea
+{
+    border: 0.1em solid #ccc;
+    border-radius: 0.5em;
+}
+
+.loader
+{
+  margin: 1em auto;
+}
+
+.loader--snake
+{
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+  transform: translate(-4.125em);
+  box-shadow: 1.375em 0em #dec023, 1.375em 0em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 2.75em 0.29721em #b8b74c, 2.75em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 4.125em 0.18368em #93ae75, 4.125em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 5.5em -0.18368em #6da59e, 5.5em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 6.875em -0.29721em #479cc7, 6.875em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8);
+  animation: snake 2s linear infinite;
+}
+
+@keyframes snake
+{
+  0% {
+    box-shadow: 1.375em 0em #dec023, 1.375em 0em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 2.75em 0.29721em #b8b74c, 2.75em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 4.125em 0.18368em #93ae75, 4.125em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 5.5em -0.18368em #6da59e, 5.5em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 6.875em -0.29721em #479cc7, 6.875em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8);
+  }
+  20% {
+    box-shadow: 1.375em 0.29721em #b8b74c, 1.375em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 2.75em 0.18368em #93ae75, 2.75em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 4.125em -0.18368em #6da59e, 4.125em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 5.5em -0.29721em #479cc7, 5.5em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 6.875em 0em #dec023, 6.875em 0em 0.625em -0.3125em rgba(0, 0, 0, 0.8);
+  }
+  40% {
+    box-shadow: 1.375em 0.18368em #93ae75, 1.375em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 2.75em -0.18368em #6da59e, 2.75em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 4.125em -0.29721em #479cc7, 4.125em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 5.5em 0em #dec023, 5.5em 0em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 6.875em 0.29721em #b8b74c, 6.875em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8);
+  }
+  60% {
+    box-shadow: 1.375em -0.18368em #6da59e, 1.375em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 2.75em -0.29721em #479cc7, 2.75em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 4.125em 0em #dec023, 4.125em 0em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 5.5em 0.29721em #b8b74c, 5.5em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 6.875em 0.18368em #93ae75, 6.875em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8);
+  }
+  80% {
+    box-shadow: 1.375em -0.29721em #479cc7, 1.375em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 2.75em 0em #dec023, 2.75em 0em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 4.125em 0.29721em #b8b74c, 4.125em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 5.5em 0.18368em #93ae75, 5.5em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 6.875em -0.18368em #6da59e, 6.875em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    box-shadow: 1.375em 0em #dec023, 1.375em 0em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 2.75em 0.29721em #b8b74c, 2.75em -0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 4.125em 0.18368em #93ae75, 4.125em -0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 5.5em -0.18368em #6da59e, 5.5em 0.18368em 0.625em -0.3125em rgba(0, 0, 0, 0.8), 6.875em -0.29721em #479cc7, 6.875em 0.29721em 0.625em -0.3125em rgba(0, 0, 0, 0.8);
+  }
+}
