@@ -1,2 +1,7 @@
-# edgar-alan-turing
-LSTM Recurrent Neural Network Text Generation
+# Edgar Alan Turing
+Text Generation with LSTM Neural Networks using [Keras](https://keras.io/) running on top of [Theano](http://deeplearning.net/software/theano/).
+
+# Web Application
+Available at edgaralanturing.com
+
+Created for HackHarvard 2016.
