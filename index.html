@@ -14,12 +14,26 @@
 </head>
 <body>
     <script type="text/javascript">
-        function submit(){
-        $.post( "?", { test_text : $("#test_text").val() },
-            function( data ) {
-            $('#test_result').html(data);});
+        function submit() {
+            $('#output').val('');
+            $('.sk-folding-cube').show();
+            $.post( "?",
+                {
+                    author : $("#author").val(),
+                    text : $("#text").val()
+                },
+                function( data ) {
+                    $('#output').val(data);
+                }
+            ).done(function() {
+                $('.sk-folding-cube').hide();
+            }).fail(function() {
+                $('#output').val("error.");
+                $('.sk-folding-cube').hide();
+            })
         };
     </script>
+
     <h1><span class="poe">Edgar Al</span></span><span class="turing">an Turing</span></h1>
     <div class='loader loader--snake'></div>
     <h3>Test the literary ability of Edgar in being able to write in numerous styles on any subject of text.</h3>
@@ -28,19 +42,36 @@
     <div id="form">
         <span>Author Style:</span>
         <br>
-        <select name="author">
-          <option value="Aristotle">Aristotle</option>
-          <option value="Tolkien">Tolkien</option>
-          <option value="Freud">Freud</option>
-          <option value="Joyce">Joyce</option>
-            <option value="Marx">Marx</option>
+        <select name="author" id="author">
+            <option value="poe">Edgar Allan Poe</option>
+            <option value="shakespeare">William Shakespeare</option>
+            <option value="tolkien">J. R. R. Tolkien</option>
+            <option value="rowling">J. K. Rowling</option>
+            <option value="dante">Dante Alighieri</option>
         </select>
         <br><br>
-        <span>Text:</span>
-        <br>
-        <textarea rows="20" cols="50"></textarea>
-        <br><br>
-        <input type="button" value="compute" title="compute" onclick="submit();"/>
+        <div class="text-zone">
+            <div class="text-left">
+                <span>Text:</span>
+                <br>
+                <textarea name="text" id="text" rows="20" cols="50"></textarea>
+            </div>
+            <div class="text-center">
+                <button class="button" onclick="submit();">Convert</button>
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                </div>
+            </div>
+            <br>
+            <div class="text-right">
+                <span>Output:</span>
+                <br>
+                <textarea readonly name="text" id="output" rows="20" cols="50"></textarea>
+            </div>
+        </div>
     </div>
 </body>
 </html>
