@@ -1,13 +1,12 @@
-import numpy
+import logging
+import logging.handlers
+from wsgiref.simple_server import make_server
+from urlparse import parse_qs
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Dropout
 from keras.layers import LSTM
-import logging
-import logging.handlers
-from urlparse import parse_qs
-
-from wsgiref.simple_server import make_server
+import numpy
 
 # # Create logger
 # logger = logging.getLogger(__name__)
