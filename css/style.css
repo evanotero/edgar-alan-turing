@@ -91,15 +91,18 @@ div > input
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
-textarea, select
+textarea, select, input
 {
-    background-color: rgba(255, 255, 255, .9)
-}
-
-textarea
-{
+    background-color: rgba(255, 255, 255, .9);
     border: 0.1em solid #ccc;
     border-radius: 0.5em;
+
+}
+
+span.warning {
+    font-size: .65em;
+    color: #fff;
+    font-family: 'Arial', serif;
 }
 
 .loader

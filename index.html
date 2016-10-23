@@ -20,7 +20,8 @@
             $.post( "?",
                 {
                     author : $("#author").val(),
-                    text : $("#text").val()
+                    text : $("#text").val(),
+                    length : $("#length").val()
                 },
                 function( data ) {
                     $('#output').val(data);
@@ -37,18 +38,24 @@
     <h1><span class="poe">Edgar Al</span></span><span class="turing">an Turing</span></h1>
     <div class='loader loader--snake'></div>
     <h3>Test the literary ability of Edgar in being able to write in numerous styles on any subject of text.</h3>
-    <h3>Choose an author style and enter the your text of choice below.</h3>
+    <h3>Choose an author style and enter a text of your choice.</h3>
     <br>
     <div id="form">
         <span>Author Style:</span>
         <br>
         <select name="author" id="author">
-            <option value="poe">Edgar Allan Poe</option>
-            <option value="shakespeare">William Shakespeare</option>
-            <option value="tolkien">J. R. R. Tolkien</option>
             <option value="rowling">J. K. Rowling</option>
+            <option value="shakespeare">William Shakespeare</option>
+            <option value="poe">Edgar Allan Poe</option>
+            <option value="tolkien">J. R. R. Tolkien</option>
             <option value="dante">Dante Alighieri</option>
         </select>
+        <br><br>
+        <span>*Length of Generated Output (in characters):</span>
+        <br>
+        <input type="number" name="length" id="length" min="20" max="1000" value="100">
+        <br>
+        <span class="warning">*WARNING: large output lengths will result in longer processing time.</span>
         <br><br>
         <div class="text-zone">
             <div class="text-left">

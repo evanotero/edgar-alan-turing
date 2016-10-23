@@ -27,7 +27,6 @@ from wsgiref.simple_server import make_server
 # # add Handler to Logger
 # logger.addHandler(handler)
 
-OUTPUT_LENGTH = 200
 SEQUENCE_LENGTH = 100
 FILE = 'index.html'
 BAD_TEXT = '/:;][{}-=+)(*&^%-_$#@!~1234567890'
@@ -106,11 +105,12 @@ def application(environ, start_response):
             request_body = "0"
         parsed_body = parse_qs(request_body)
 
-        text = parsed_body.get('text', [''])[0]  # Returns the first value
+        text = parsed_body.get('text', [''])[0]
         author = parsed_body.get('author', [''])[0]
+        output_length = int(parsed_body.get('length', [''])[0])
 
         if text.strip() != "":
-            response_body = translate(author, text)
+            response_body = translate(author, text, output_length)
         else:
             response_body = "No input text."
 
@@ -126,7 +126,7 @@ def application(environ, start_response):
     return [response_body]
 
 
-def translate(author, text):
+def translate(author, text, output_length):
     vars = author_vars.get(author)
     char_to_int = vars.get("char_to_int")
     int_to_char = vars.get("int_to_char")
@@ -153,7 +153,7 @@ def translate(author, text):
     model.load_weights(vars.get("weights_name"))
     model.compile(loss='categorical_crossentropy', optimizer='adam')
 
-    return generate_chars(model, pattern, int_to_char, OUTPUT_LENGTH)
+    return generate_chars(model, pattern, int_to_char, output_length)
 
 
 def generate_ints(text, chars):
