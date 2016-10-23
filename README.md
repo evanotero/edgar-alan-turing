@@ -12,6 +12,14 @@ g2.2xlarge:
   60 GB of local instance storage,
   64-bit platform
 ```
+The models each trained for 50 epochs, which took between 4 and 9 hours on Amazon's GPUs, depending on the size of the text files.
+
+The training loss for the models went as follows:
+![alt text](https://github.com/evanotero/edgar-alan-turing/photo.png "Training Loss by Epoch")
+
+
+# Results
+The different authors' models vary in performance, with the Edgar Allan Poe model performing poorly, and the JL Rowling model showing the most promise. The models show both a base-level understanding of the English language, reliably forming proper words and sentences, and a higher level understanding of character, plot, and rhythm, creating sequences of text featuring similar dialogue and rhythmic patterns to those of the authors they were modeled from. 
 
 # Web Application
 Available at ~~[edgaralanturing.com](edgaralanturing.com)~~.
