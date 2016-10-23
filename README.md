@@ -15,7 +15,7 @@ g2.2xlarge:
 The models each trained for 50 epochs, which took between 4 and 9 hours on Amazon's GPUs, depending on the size of the text files.
 
 The training loss for the models went as follows:
-![alt text](https://github.com/evanotero/edgar-alan-turing/photo.png "Training Loss by Epoch")
+![alt text](https://github.com/evanotero/edgar-alan-turing/blob/master/photo.png "Training Loss by Epoch")
 
 
 # Results
