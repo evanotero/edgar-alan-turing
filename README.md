@@ -14,6 +14,6 @@ g2.2xlarge:
 ```
 
 # Web Application
-Available at [edgaralanturing.com](edgaralanturing.com).
+Available at ~~[edgaralanturing.com](edgaralanturing.com)~~.
 
 _Created for HackHarvard 2016._
