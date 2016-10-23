@@ -1,0 +1,1 @@
+sudo scp -i keypair-name.pem ubuntu@99.99.999.99:~/your-weights-file-name.hdf5 ~/Desktop
