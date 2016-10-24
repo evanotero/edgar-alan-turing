@@ -22,6 +22,6 @@ The training loss for the models went as follows:
 The different authors' models vary in performance, with the Edgar Allan Poe model performing poorly, and the JK Rowling model showing the most promise. Additional to these two, we also ran models on the works of Dante Alighieri, JRR Tolkien, and and William Shakespeare. The models show both a base-level understanding of the English language, reliably forming proper words and sentences, and a higher level understanding of character, plot, and rhythm, creating sequences of text featuring similar dialogue and rhythmic patterns to those of the authors they were modeled from. 
 
 # Web Application
-Available at [edgaralanturing.com](edgaralanturing.com) (backend is currently under construction).
+Available at http://edgaralanturing.com (backend is currently under construction).
 
 _Created for HackHarvard 2016._
